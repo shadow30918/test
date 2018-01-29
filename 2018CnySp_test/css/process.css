@@ -1,0 +1,184 @@
+@charset "UTF-8";
+#Content > .fixedContainer {
+  min-height: 790px;
+  border-bottom: 3px solid #b89463; }
+  #Content > .fixedContainer > div {
+    margin: 0 auto;
+    width: 1200px;
+    display: block; }
+
+#Content #ContentFooter {
+  height: 369px; }
+
+#Content #processBG {
+  width: 100%; }
+
+#Content #Section {
+  margin-top: 20px; }
+  #Content #Section > div {
+    text-align: center; }
+  #Content #Section hr {
+    margin: 0;
+    padding: 0; }
+  #Content #Section .Text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px; }
+  #Content #Section #S_1 {
+    display: none;
+    display: block;
+    font-size: 0; }
+    #Content #Section #S_1 span, #Content #Section #S_1 input, #Content #Section #S_1 p {
+      font-size: 1.4rem; }
+    #Content #Section #S_1 span {
+      text-align: left;
+      width: 60px;
+      display: inline-block; }
+    #Content #Section #S_1 .telephone input {
+      margin: 0 auto 1rem auto;
+      height: 2.25rem;
+      padding: 0;
+      line-height: 2.25rem;
+      text-align: center;
+      border: 2px #999 solid;
+      display: inline-block; }
+      #Content #Section #S_1 .telephone input:nth-child(2) {
+        width: 70px; }
+      #Content #Section #S_1 .telephone input:last-child {
+        width: 200px; }
+      #Content #Section #S_1 .telephone input::-webkit-input-placeholder {
+        /*Webkit browsers*/
+        color: #ccc; }
+      #Content #Section #S_1 .telephone input::-moz-placeholder {
+        /*Mozilla Firefox*/
+        color: #ccc;
+        opacity: 1; }
+      #Content #Section #S_1 .telephone input:-ms-input-placeholder {
+        /*Internet Explorer 10+*/
+        color: #ccc; }
+    #Content #Section #S_1 .telephone p {
+      display: inline-block; }
+      #Content #Section #S_1 .telephone p:after {
+        content: " － ";
+        margin: 0 10px; }
+    #Content #Section #S_1 .mobile input {
+      margin: 0 auto 1rem auto;
+      height: 2.25rem;
+      width: 316px;
+      padding: 0;
+      line-height: 2.25rem;
+      text-align: center;
+      border: 2px #999 solid;
+      display: inline-block; }
+      #Content #Section #S_1 .mobile input::-webkit-input-placeholder {
+        /*Webkit browsers*/
+        color: #ccc; }
+      #Content #Section #S_1 .mobile input::-moz-placeholder {
+        /*Mozilla Firefox*/
+        color: #ccc;
+        opacity: 1; }
+      #Content #Section #S_1 .mobile input:-ms-input-placeholder {
+        /*Internet Explorer 10+*/
+        color: #ccc; }
+    #Content #Section #S_1 #Bu_Submit {
+      display: inline-block;
+      margin: 20px 10px 40px;
+      width: 239px;
+      height: 61px;
+      background: url(../img/form_bu_2.png) 0 0 no-repeat; }
+    #Content #Section #S_1 #Bu_OfficalProcess {
+      display: inline-block;
+      margin: 2rem 10px;
+      width: 239px;
+      height: 61px;
+      background: url(../img/bu_officalprocess.png) 0 0 no-repeat; }
+  #Content #Section #S_2 {
+    display: none; }
+    #Content #Section #S_2 #Bu_done {
+      display: block;
+      margin: 40px auto;
+      width: 239px;
+      height: 61px;
+      background: url(../img/process_s_2_bu.png) 0 0 no-repeat; }
+  #Content #Section #S_2 #ResultContainer {
+    width: 96%;
+    margin: 20px auto; }
+
+#Content #ContentBody #S_2 .remind {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+  line-height: 1.2em; }
+
+/* Common */
+.table {
+  display: table;
+  border-bottom: 2px #b89463 solid;
+  border-right: 2px #b89463 solid;
+  border-left: 2px #b89463 solid; }
+
+.th {
+  display: table-row;
+  background-color: #b89463;
+  color: #fff;
+  font-size: 1.2rem; }
+
+.tr {
+  display: table-row;
+  background-color: #fdfef9; }
+
+.td {
+  display: table-cell;
+  padding: 0.5rem 0; }
+
+/**************************************************/
+/* Mobile */
+body.Mobile #Content #Section #S_1 span, body.Mobile #Content #Section #S_1 input, body.Mobile #Content #Section #S_1 p {
+  font-size: 1.4rem; }
+
+body.Mobile #Content #Section #S_1 span {
+  width: 200px; }
+
+body.Mobile #Content #Section #S_1 .telephone input {
+  height: 3rem;
+  width: 700px;
+  padding: 0;
+  line-height: 3rem;
+  border: 2px #666 solid; }
+  body.Mobile #Content #Section #S_1 .telephone input:nth-child(2) {
+    width: 250px; }
+  body.Mobile #Content #Section #S_1 .telephone input:last-child {
+    width: 450px; }
+
+body.Mobile #Content #Section #S_1 .mobile input {
+  height: 3rem;
+  width: 800px;
+  padding: 0;
+  line-height: 3rem;
+  border: 2px #666 solid; }
+
+body.Mobile #Content #Section .Text {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px; }
+
+body.Mobile .th {
+  font-size: 1.8rem; }
+
+body.Mobile .td {
+  font-size: 0.9rem;
+  padding: 1.0rem 0; }
+
+body.Mobile #Content #Section #S_1 #Bu_Submit {
+  display: inline-block;
+  width: 448px;
+  height: 115px;
+  background: url(../mobile/img/m_process_s_1_bu.png) 0 0 no-repeat; }
+
+body.Mobile #Content #Section #S_1 #Bu_OfficalProcess {
+  display: inline-block;
+  width: 448px;
+  height: 115px;
+  background: url(../mobile/img/bu_officalprocess.jpg) 0 0 no-repeat; }

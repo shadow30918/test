@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="電視,冰箱,冷氣,吸塵器,電子衣櫥,空氣清淨器,掃地機器人,LG放價,優惠,特價" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <title>LG喜迎旺年 澳遊趣</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css" / />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link href='css/jquery.jscrollpane.css' rel='stylesheet' type='text/css'>
+    <script src="//code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
+    <script src="js/jquery.jscrollpane.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56129538-16', 'auto');
+  ga('require', 'displayfeatures');
+  ga('require', 'linkid');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+    <div id="Mask">
+      <img src="../../common_img/loading.svg" />
+    </div>
+    <div id="remind">
+          <div id="popup">
+            <div id="scollInfo">
+              <img id="Img" src="img/popup.png">
+              <div id="scroll_Close" class="bu"><img src="img/popclose.png"></div>
+            </br></br></br>
+            </div>
+            <div id="BU_Close" class="bu"><img src="img/pop_closebtn.png"></div>
+          </div>
+    </div>
+    <div id="Header">
+        <div class="container">
+            <div id="Logo" class="bu"><img class="imgFullSizeH" src="../../common_img/lg-lifes-good-logo.svg" /></div>
+            <ul id="Menu">
+                <li class="bu" data-link='index'><span>首頁</span></li>
+                <li class="bu" data-link='rule'><span>活動辦法</span></li>
+                <li class="bu" data-link='login'><span>兌換登入</span></li>
+                <li class="bu" data-link='process'><span>進度查詢</span></li>
+                <li class="bu" data-link='http://www.lg.com/tw'><span>了解產品</span></li>
+                <li class="bu" data-link='winner'><span>得獎名單</span></li>
+                <li class="bu" data-link='faq'><span>FAQ</span></li>
+                <li class="bu" data-link='https://www.facebook.com/lg.com.tw'><span><img class="imgFullSizeH" src="../../common_img/fb.svg" /></span></li>
+            </ul>
+        </div>
+    </div>
+    <div id="Content">
+        <div class="container">
+           <ul id="SubMenu"></ul>
+           <div id="Img"></div>
+           <div id="Link" data-page="0" class="show">
+              <!--<div id="BU_OfficalSite" class="link bu"></div>
+              <div id="BU_Login" class="link bu"></div>-->
+              <div id="BU_DownloadPdf" class="link bu"></div>
+           </div> 
+           <!--div id="Link" data-page="6">
+             <div id="BU_OfficalSite_1" class="link bu"></div>
+           </div-->
+
+           <!-- 錨點 --> 
+           <div id="clasic-refrigerator" class="link"></div>
+           <div id="slim-refrigerator" class="link"></div>
+           <div id="clasic-wash" class="link"></div>
+           <div id="twin-wash" class="link"></div>
+           <div id="air" class="link"></div>
+           <div id="dry" class="link"></div>
+        </div>
+    </div>
+    <div id="Footer">Copyright © 2016 LG Electronics. All Rights Reserved</div>
+    <script src="js/common.js"></script>
+
+    <script>
+      $( window ).on( "load", function() {
+         $('#Content #Link > div').on('click',function() {
+            switch ($(this).attr('id')) {
+               case 'BU_OfficalSite':
+                  GEvent('rule:0:www.lg.com/tw/support/product-registration')
+                  window.open("http://www.lg.com/tw/support/product-registration","_blank");
+                  break;
+               case 'BU_Login':
+                  GEvent('rule:0:login')
+                  //alert('目前無法進行兌換登入！');
+                  window.location.href="login.html";
+                  break;
+               case 'BU_DownloadPdf':
+                  GEvent('rule:0:pdf')
+                  window.open("http://www.lgevent-tw.com/branding/2018CnySp/dl/2018cny.pdf","_blank");
+                  break;
+               case 'BU_OfficalSite_1':
+                  GEvent('rule:6:www.lg.com/tw/support/product-registration')
+                  window.open("http://www.lg.com/tw/support/product-registration","_blank");
+                  break;
+            }
+         });
+      });
+    </script>
+</body>
+
+</html>

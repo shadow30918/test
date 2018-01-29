@@ -1,0 +1,247 @@
+#Content {
+  > .fixedContainer {
+    min-height: 790px;
+    border-bottom: 3px solid #b89463;
+    //margin-top: 14px;
+    > div {
+      margin: 0 auto;
+      width: 1200px;
+      display: block;
+    }
+  }
+  #ContentHead {
+    //height: 103px;
+  }
+  #ContentBody {
+    //height: 735px;
+    //background: url(../img/process_bg.jpg) top center no-repeat;
+  }
+  #ContentFooter {
+    height: 369px;
+  }
+  #processBG {
+    width: 100%;
+  }
+
+  #Section {
+    margin-top: 20px;
+
+    > div {
+      text-align: center;
+    }
+    hr {
+      margin: 0;
+      padding: 0;
+    }
+    .Text {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #S_1 {
+      display: none;
+      display: block;
+      font-size: 0;
+
+      span , input ,p {
+        font-size: 1.4rem;
+      }
+      span{
+        text-align: left;
+        width: 60px;
+        display: inline-block;
+      }
+      .telephone{
+        input {
+          margin: 0 auto 1rem auto;
+          height: 2.25rem;
+          padding: 0 ;
+          line-height: 2.25rem;
+          text-align: center;
+          border: 2px #999 solid;
+          display: inline-block;
+          &:nth-child(2){
+            width: 70px;
+            
+          }
+          &:last-child{
+            width: 200px;
+          }
+          &::-webkit-input-placeholder{    /*Webkit browsers*/
+            color:#ccc;
+          }
+          &::-moz-placeholder {                 /*Mozilla Firefox*/
+            color:#ccc;
+            opacity:1;
+          }
+          &:-ms-input-placeholder {         /*Internet Explorer 10+*/
+            color:#ccc;
+          }
+        }
+        p{
+          display: inline-block;
+          &:after{
+            content: " － ";
+            margin:0 10px;
+          }
+        }
+      }
+
+      .mobile{
+        input {
+          margin: 0 auto 1rem auto;
+          height: 2.25rem;
+          width: 316px;
+          padding: 0 ;
+          line-height: 2.25rem;
+          text-align: center;
+          border: 2px #999 solid;
+          display: inline-block;
+          &::-webkit-input-placeholder{    /*Webkit browsers*/
+            color:#ccc;
+          }
+          &::-moz-placeholder {                 /*Mozilla Firefox*/
+                color:#ccc;
+               opacity:1;
+          }
+          &:-ms-input-placeholder {         /*Internet Explorer 10+*/
+                color:#ccc;
+          }
+        }
+      }
+      #Bu_Submit {
+        display: inline-block;
+        margin: 20px 10px 40px;
+        width: 239px;
+        height: 61px;
+        background: url(../img/form_bu_2.png) 0 0 no-repeat;
+      }
+      #Bu_OfficalProcess {
+        display: inline-block;
+        margin: 2rem 10px;
+        width: 239px;
+        height: 61px;
+        background: url(../img/bu_officalprocess.png) 0 0 no-repeat;
+      }
+    }
+    #S_2 {
+      display: none;
+      #Bu_done {
+        display: block;
+        margin: 40px auto ;
+        width: 239px;
+        height: 61px;
+        background: url(../img/process_s_2_bu.png) 0 0 no-repeat;
+      }
+    }
+    #S_2 #ResultContainer {
+      width: 96%;
+      margin: 20px auto;
+    }
+  }
+  #ContentBody #S_2 .remind {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    line-height: 1.2em;
+  }
+}
+
+/* Common */
+
+.table {
+  display: table;
+  border-bottom: 2px #b89463 solid;
+  border-right: 2px #b89463 solid;
+  border-left: 2px #b89463 solid;
+}
+
+.th {
+  display: table-row;
+  background-color: #b89463;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.tr {
+  display: table-row;
+  background-color: #fdfef9;
+}
+
+.td {
+  display: table-cell;
+  padding: 0.5rem 0;
+}
+
+/**************************************************/
+/* Mobile */
+
+body.Mobile {
+  #Content {    
+    #ContentBody {
+      //height: 1605px;
+      //background: url(../mobile/img/process_bg.jpg) top center no-repeat;
+    }
+    #Section {
+      #S_1 {
+        span , input ,p {
+          font-size: 1.4rem;
+        }
+        span{
+          width: 200px;
+        }
+        .telephone{
+          input {
+            height: 3rem;
+            width: 700px;            
+            padding: 0 ;
+            line-height: 3rem;
+            border: 2px #666 solid;
+
+            &:nth-child(2){
+              width: 250px;
+            }
+            &:last-child{
+              width: 450px;
+            }
+          }
+        }
+        .mobile{
+          input {
+            height: 3rem;
+            width: 800px;            
+            padding: 0 ;
+            line-height: 3rem;
+            border: 2px #666 solid;
+          }
+        }
+      }
+      .Text {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .th {
+    font-size: 1.8rem;
+  }
+  .td {
+    font-size: 0.9rem;
+    padding: 1.0rem 0;
+  }
+  #Content #Section #S_1 #Bu_Submit {
+    display: inline-block;
+    width: 448px;
+    height: 115px;
+    background: url(../mobile/img/m_process_s_1_bu.png) 0 0 no-repeat;
+  }
+  #Content #Section #S_1 #Bu_OfficalProcess {
+    display: inline-block;
+    width: 448px;
+    height: 115px;
+    background: url(../mobile/img/bu_officalprocess.jpg) 0 0 no-repeat;
+  }
+}

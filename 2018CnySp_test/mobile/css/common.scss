@@ -1,0 +1,497 @@
+/*
+* Noto Sans TC (Chinese_traditional) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 100;
+    src: url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff2") format('woff2'), url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff") format('woff'), url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.otf") format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 300;
+    src: url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2") format('woff2'), url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff") format('woff'), url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf") format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    src: url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2") format('woff2'), url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff") format('woff'), url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf") format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    src: url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff2") format('woff2'), url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff") format('woff'), url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.otf") format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 700;
+    src: url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff2") format('woff2'), url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff") format('woff'), url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.otf") format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 900;
+    src: url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff2") format('woff2'), url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff") format('woff'), url("//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.otf") format('opentype');
+}
+$containerWidth: 1200px;
+$HeaderHeight: 200px;
+$FooterHeight: 100px;
+$allFont: "Noto Sans TC",Microsoft JhengHei,"Heiti TC",Helvetica,'Source Sans Pro';
+$engFont: "Lato",sans-serif,"Source Sans Pro",Microsoft JhengHei,"Heiti TC",Helvetica;
+%middleParentBefore {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+@mixin middleObject($h:auto) {
+    display: inline-block;
+    vertical-align: middle;
+    height: $h;
+}
+@mixin animateEff($effName, $sec, $times, $delaySec:0s, $timing:linear) {
+    animation-name: $effName;
+    animation-duration: $sec;
+    animation-iteration-count: $times;
+    animation-delay: $delaySec;
+    animation-timing-function: $timing;
+}
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,120px,0) scaleY(1);
+        transition: opacity 1.5s , transform 1s cubic-bezier(0.19,1,0.22,1);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0,0,0) scaleY(1);
+    }
+}
+/* html tag ==> font-size : 100% = 16px; 16px*75%=12px */
+html {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 300%;
+    margin: 0;
+    padding: 0;
+    body {
+        &,
+        * {
+            font-family: $allFont;
+        }
+    }
+}
+/* -------------------- */
+/* Common */
+/* -------------------- */
+img {
+    max-width: $containerWidth;
+}
+.imgFullSize {
+    width: 100%;
+    height: 100%;
+}
+.imgFullSizeW {
+    width: 100%;
+}
+.imgFullSizeH {
+    height: 100%;
+}
+*:focus {
+    outline: none;
+}
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+.clearfix::after,
+.clearfix::before {
+    content: " ";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+.bu {
+    cursor: pointer;
+}
+.container {
+    margin: 0 auto;
+    width: $containerWidth;
+    height: 100%;
+    position: relative;
+    > * {
+        position: absolute;
+    }
+}
+/* -------------------- */
+/* Content */
+/* -------------------- */
+#Mask {
+    width: $containerWidth;
+    height: 100vh;
+    position: fixed;
+    z-index: 2001;
+    background-color: rgba(255,255,255,0.8);
+    text-align: center;
+    &::before {
+        @extend %middleParentBefore;
+    }
+    > div {
+        position: static;
+    }
+}
+#remind{
+  width:100%;
+  height:100%;
+  background-color:#fff;
+  position:fixed;
+  overflow: scroll;
+  z-index:1201;
+  text-align:center;
+  background-color:rgba(0,0,0,.7);
+  display:none;
+  #popup{
+    text-align: center;
+    background: url("../img/popbg.png");
+    margin: 120px auto 0 auto;
+    max-width: 1128px;
+    height: 2790px;
+    width: 100%;
+    position: relative;
+    #scroll_Close{
+      position: absolute;
+      bottom:20px;
+      left:30%;
+    }
+    #BU_Close{
+      position: absolute;
+      right: 40px;
+      top: 25px;
+    }
+  }
+}
+#Header {
+    height: $HeaderHeight;
+    position: fixed;
+    z-index: 1001;
+    background-color: rgba(255,255,255,0.8);
+    width: $containerWidth;
+    .container {
+        #Logo {
+            left: 0;
+            height: $HeaderHeight;
+            width:400px;
+            background: url('../../../../common_img/lg-lifes-good-logo-mobile.svg') center top no-repeat;
+            background-size: 100% auto;
+            z-index: 1002;
+        }
+        #NavIcon {
+            right: 0;
+            height: $HeaderHeight;
+            width: $HeaderHeight;
+            background: url('../../../../common_img/hamburger-line.svg') center -20% no-repeat;
+            background-size: 80% auto;
+            z-index: 1002;
+        }
+        #Menu {
+            display: none;
+            height: 100vh;
+            width: $containerWidth;
+            left: 0;
+            background-color: rgba(0,0,0,0.8);
+            ul {
+                position: absolute;
+                top:$HeaderHeight;
+                width:100%;
+                li {
+                    display: block;
+                    text-align: center;
+                    > span {
+                        padding: 0 5%;
+                        color: #FFF;
+                        font-size: 1.6rem;
+                        line-height: 4rem;
+                        letter-spacing: 0.3rem;
+                        height: 8rem;
+                        position: relative;
+                        &::before {
+                            background: #c7184e none repeat scroll 0 0;
+                            bottom: 5px;
+                            content: "";
+                            display: inline-block;
+                            height: 2px;
+                            left: 0;
+                            position: absolute;
+                            transition: all 0.25s ease 0s;
+                            width: 0;
+                        }
+                    }
+                    &.select {
+                        > span {
+                           color: #c7184e;
+                           border-bottom: 3px #c7184e solid;
+                        }
+                    }
+                    .subMenu {
+                       width: 100%;
+                       display: none;
+                       background: #a00024;
+                       color:#FFF;
+                       &:hover {
+                         color:#FFF;
+                       }
+                       span {
+                          width: 100%;
+                          text-align: center;
+                          display: inline-block;
+                          font-size: 1.2rem;
+                          padding: 0.9rem 0;
+                          &:first-child {
+                             border-bottom:1px #FFF solid;
+                          }
+                       }
+                    }
+                }
+            }
+        }
+    }
+   &.open {
+      .container {
+         #Logo {
+            background-position: 0 -230px;
+         }
+         #NavIcon {
+            background-position: center 110%;
+         }
+         #Menu {
+            display: block;
+            ul {
+               @include animateEff(slideUp,0.5s,1);
+            }
+         }
+      }
+   }
+}
+#Content {
+    height: auto;
+    padding-top: $HeaderHeight+40;
+}
+#Footer {
+    font-family: $engFont;
+    height: $FooterHeight;
+    line-height: $FooterHeight;
+    font-size: 0.8rem;
+    vertical-align: middle;
+    text-align: center;
+}
+/***************/
+/**   index   **/
+/***************/
+body[page=index] {
+    #Content {
+        .container {
+            #EventImg {
+               width:$containerWidth;
+               min-height:1600px;
+               position: static;
+            }
+            #BU_Rule {
+              position: absolute;
+              bottom: 100px;
+              right: 40px;
+              width: 500px;
+              height: 150px;
+            }
+        }
+    }
+}
+/**************/
+/**   Rule   **/
+/**************/
+body[page=rule],
+body[page=winner] {
+    #Content {
+        .container {
+            & > * {
+                position: static;
+            }
+            #SubMenu {
+                font-size: 0;
+                li {
+                  display: inline-block;
+                  margin: 1px 1px 0 0;
+                  overflow: hidden;
+                  height: 3rem;
+                  &.unselect {
+                      background-color: #cccccc !important;
+                  }
+                  p {
+                      color: #FFF;
+                      font-weight: 300;
+                      font-size: 0.9rem;
+                      line-height: 1.2rem;
+                      letter-spacing: 0.1rem;
+                      word-break: normal;
+                      display: table-cell;
+                      vertical-align: middle;
+                      text-align: center;
+                      height: 3rem;
+                      padding: 0 14px;
+                  }
+
+                  .sss {
+                    position: absolute;
+                    background-color: rgb(194, 15, 36);                    
+                    width:199px;
+                    display: none;
+
+                    span {
+                      color: #fff;
+                      text-align: center;
+                      display: block;
+                      line-height: 1.2;
+                      font-size: 0.8rem;
+                      width: 100%;
+                      padding: 15% 0;
+                      border-bottom: 1px solid #fff;                        
+                    }
+
+                    span:hover{
+                      color:yellow;
+                    }
+
+                    span:last-child{
+                      border:0;
+                    }
+                  }
+                }
+            }
+        }
+    }
+}
+body[page=faq] {
+    #Content {
+        .container {
+            text-align: center;
+            & > * {
+                position: static;
+            }
+            #Title {
+                display: inline-block;
+                font-size: 1.3rem;
+                background-color: #999999;
+                color: #FFF;
+                text-align: center;
+                margin: 0 auto 20px;
+                padding: 10px 20px;
+                letter-spacing: 0.2rem;
+            }
+        }
+    }
+}
+body[page=fbcheckin] {
+    #Content {
+        .container {
+          #BU_Login_rule {
+            position: absolute;
+            width: 810px;
+            height: 215px;
+            bottom: 240px;
+            left: 195px;
+          }
+            & > * {
+                position: static;
+            }
+            #Title {
+                display: inline-block;
+                font-size: 1.3rem;
+                background-color: #999999;
+                color: #FFF;
+                text-align: center;
+                margin: 0 auto 20px;
+                padding: 10px 20px;
+                letter-spacing: 0.2rem;
+            }
+        }
+    }
+}
+
+/**************/
+/**   Other - Extral   **/
+/**************/
+body[page=rule] {
+   #Content {
+      .container {
+        #Link {
+          display: none;
+          .link {
+             position: absolute;
+          }
+          #BU_OfficalSite {
+             width:430px;
+             height:150px;
+             top:2300px;
+             left:123px;
+          }
+          #BU_Login {
+             width:500px;
+             height:150px;
+             top:2300px;
+             left:590px;
+          }
+          #BU_DownloadPdf {
+             width:475px;
+             height:150px;
+             top:3730px;
+             left:365px;
+          }
+          #BU_OfficalSite_1 {
+             width:430px;
+             height:150px;
+             top:1050px;
+             left:380px;
+          }
+          &.show {
+             display: block;
+          }
+        }
+
+        .link {
+          position: absolute;
+        }
+
+        #clasic-refrigerator {
+          top:200px;
+        }
+
+        #slim-refrigerator {
+          top:1800px;
+        }
+
+        #clasic-wash {
+          top:200px;
+        }
+
+        #twin-wash {
+          top:3200px;
+        }
+
+        #air {
+          top:1100px;
+        }
+
+        #dry {
+          top:2750px;
+        }
+
+      }
+   }
+}
