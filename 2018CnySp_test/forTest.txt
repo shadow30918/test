@@ -1,0 +1,17 @@
+http://www.lgevent-tw.com/2017_test/2017Junsp/func_wifi.php?func=checkDuplicate&
+prod_type_1=1&prod_model_1=GR-DBF85S&prod_sn_no_1=111AAA11111&
+prod_type_2=2&prod_model_2=F2721HTTV&prod_sn_no_2=111AAA11112&
+prod_type_3=4&prod_model_3=RD171QGC0&prod_sn_no_3=111AAA11113
+
+
+
+
+http://www.lgevent-tw.com/2017_test/2017Junsp/func_wifi.php?func=saveData&
+name=test&phone=&mobile=0937602221&zipcode=11101&address=%E4%B8%AD%E6%AD%A31%E8%B7%AF&email=test@test.com&
+prod_type_1=1&prod_model_1=GR-DBF85S&prod_sn_no_1=111AAA11111&
+prod_type_2=2&prod_model_2=F2721HTTV&prod_sn_no_2=704KWSB7N014&
+prod_type_3=4&prod_model_3=RD171QGC0&prod_sn_no_3=111AAA11113&
+img_invoice_img=15812.JPG&img_guar_img=15813.JPG
+
+
+http://www.lgevent-tw.com/2017_test/2017Junsp/insert.php?func=getStatus&tel=0937602221
